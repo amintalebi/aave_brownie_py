@@ -11,9 +11,9 @@ autofetch_sources: True
 dotenv: .env
 # Change to trye to verify smart contracts
 verify: False
-# set a custom mnemonic for the development network
+# set a custom mnemonic for the development network  
 networks:
-    default: mainnet-fork
+    default: fuji
     mainnet-fork:
         lending_pool_addresses_provider: "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5"
         weth_token: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
@@ -44,8 +44,20 @@ networks:
         # Sometimes the lending_pool address changes, so we want to get the address from there
         lending_pool_addresses_provider: "0x88757f2f99175387ab4c6a4b3067c77a695b0349"
         weth_token: "0xd0a1e359811322d97991e03f863a0c30c2cf029c"
+    fuji:
+        wavax_token: "0xd00ae08403B9bbb9124bB305C09058E32C39A48c"
+        usdt_token: "0x02823f9B469960Bb3b1de0B3746D4b95B7E35543"
+        weth_token: "0x9668f5f55f2712Dd2dfa316256609b516292D554"
+        link_token: "0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846"
+        lending_pool_addresses_provider: "0x5a76015F3BDB116428EE7f88523B133B6156f67F"
+        avax_usd_price_feed: "0x5498BB86BC934c8D34FDA08E81D444153d0D06aD"
+        eth_usd_price_feed: "0x86d67c3D38D2bCeE722E601025C25a575021c6EA"
+        ui_pool_data_provider: "0x165BB5e706785dBB7f8F40A411E2C0d31eAe3A84"
+        
+        gas_limit: "100000000000"
+
 wallets:
-    from_key: ${PRIVATE_KEY}
-    from_mnemonic: ${MNEMONIC}
+    from_key: 0x044030bcab16a005c84755333bf2918d980f42b88e4ebb4b2585807a6029a02d
+    from_mnemonic: abuse price base neutral target double mask moment asthma vehicle inside anger
 
     # could also do from_mnemonic, and you'd have to change the accounts.add to accounts.from_mnemonic
